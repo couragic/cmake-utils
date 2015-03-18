@@ -2,8 +2,10 @@ include(CompilerUtils)
 include(QtBundleUtils)
 include(MocUtils)
 
+
 macro(UPDATE_COMPILER_FLAGS target)    
     if(MSVC)
+
         list(APPEND COMPILER_FLAGS "/W3")
     else()
         list(APPEND COMPILER_FLAGS "-Wall -Wextra -Wnon-virtual-dtor")
